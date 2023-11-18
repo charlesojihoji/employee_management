@@ -50,4 +50,12 @@ public class EmployeeServiceImpl implements EmployeeService{
 		return "Employee not updated";
 	}
 
+	@Override
+	public String deleteEmployee(int id) {
+
+		employeeRepository.deleteById(id);
+		
+		return "The Employee has been deleted";
+	}
+
 }
